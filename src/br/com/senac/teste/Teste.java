@@ -18,7 +18,7 @@ public class Teste {
 		}
 
 		System.out.println();
-		System.out.println("Válidos: " + lista.getValidos());
+		System.out.println("Validos: " + lista.getValidos());
 
 		// Exercicio 02
 		lista.adicionarEmPosicao(1, new Ponto(9, 5));
@@ -26,7 +26,7 @@ public class Teste {
 			System.out.print(lista.getPontos()[i] + " ");
 		}
 		System.out.println();
-		System.out.println("Válidos: " + lista.getValidos());
+		System.out.println("Validos: " + lista.getValidos());
 
 		// Exercicio 03
 		System.out.println(lista.indicePrimeiraOcorrencia(new Ponto(3, 10)));
@@ -37,7 +37,7 @@ public class Teste {
 			System.out.print(lista.getPontos()[i] + " ");
 		}
 		System.out.println();
-		System.out.println("Válidos: " + lista.getValidos());
+		System.out.println("Validos: " + lista.getValidos());
 
 		// Exercicio 06
 		ListaPonto pontosCircunferencia = lista.pontosCircunferencia(1.9);

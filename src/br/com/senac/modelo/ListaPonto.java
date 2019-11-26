@@ -21,17 +21,17 @@ public class ListaPonto {
 				return;
 			}
 		}
-		System.out.println("[ERROR] - Lista cheia, não foi possível adicionar o ponto: " + p );
+		System.out.println("[ERROR] - Lista cheia, nao foi possivel adicionar o ponto: " + p );
 		System.out.println();
 		System.out.println();
 	}
 
 	/*
-	 * Adicionar em uma posição especifica
+	 * Adicionar em uma posicao especifica
 	 */
 	public void adicionarEmPosicao(int posicao, Ponto p) {
 		if (this.pontos.length <= posicao || this.validos == this.pontos.length) {
-			System.out.println("[ERROR] - Posição indisponivel \n\n");
+			System.out.println("[ERROR] - Posicao indisponivel \n\n");
 			return;
 		}
 		if (this.pontos[posicao] == null) {
@@ -50,7 +50,7 @@ public class ListaPonto {
 	}
 
 	/*
-	 * Retornar o indice da primeiro ocorrência
+	 * Retornar o indice da primeiro ocorrencia
 	 */
 	public int indicePrimeiraOcorrencia(Ponto p) {
 		for (int i = 0; i < this.pontos.length; i++) {
@@ -68,7 +68,7 @@ public class ListaPonto {
 	 */
 	public void remove(int posicao) {
 		if (this.pontos.length <= posicao || this.pontos[posicao] == null) {
-			System.out.println("[ERROR] - Posição indisponivel");
+			System.out.println("[ERROR] - Posicao indisponivel");
 			return;
 		}
 		this.pontos[posicao] = null;
@@ -121,9 +121,11 @@ public class ListaPonto {
 	}
 	
 	public void listar() {
-		System.out.println("A lista está assim: ");
+		System.out.println("Valores da Lista: ");
 		for(int i = 0; i < this.pontos.length; i++) {
-			System.out.print(getPontos()[i] + " ");
+			if(getPontos()[i] != null) {
+			System.out.print("pos: "+i+" "+getPontos()[i] + " / ");
+			}
 		}
 		System.out.println("\n\n");
 	}

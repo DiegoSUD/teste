@@ -5,20 +5,26 @@ import java.util.Scanner;
 import br.com.senac.modelo.ListaPonto;
 import br.com.senac.modelo.Ponto;
 
+// Trabalho Programacao e Algoritmos II
+// Alexandre Vincius Ferreira da Silva
+// Diego 
+// Lucass
+
+
 public class Principal {
 	
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
-				
+				//Inicializa o tamanho desejado.
 				System.out.print("Digite um tamanho para o seu vetor: \n");
 				int tamanho = Integer.parseInt(scanner.nextLine());
 				ListaPonto principal = new ListaPonto(tamanho);
 				menu();
 				int opcao1 = 0;
 				
-				//teste
-				
+				// Do While do Menu enquanto != 0
 				do {
 					int opcao = Integer.parseInt(scanner.nextLine());
 					opcao1 = opcao;
@@ -34,7 +40,7 @@ public class Principal {
 						System.out.println("Digite o valor dos pontos x e y");
 						int pontoX2 = Integer.parseInt(scanner.nextLine());
 						int pontoY2 = Integer.parseInt(scanner.nextLine());
-						System.out.println("Qual posição deseja add o ponto");
+						System.out.println("Qual posicao deseja add o ponto");
 						int pos = Integer.parseInt(scanner.nextLine());
 						principal.adicionarEmPosicao(pos, new Ponto(pontoX2, pontoY2));
 						menu();
@@ -49,36 +55,38 @@ public class Principal {
 						int pontoY4 = Integer.parseInt(scanner.nextLine());
 						int indice = principal.indicePrimeiraOcorrencia(new Ponto(pontoX4, pontoY4));
 						if(indice != -1) {
-							System.out.println("O indice é : " + indice + "\n");
+							System.out.println("O indice do valor buscado: " + indice + "\n");
 						}else {
-							System.out.println("Não existe esse ponto na lista: "  + indice + "\n");
+							System.out.println("Nao existe esse ponto na lista: "  + indice + "\n");
 						}
 						menu();
 						break;
 					case 5:
-						System.out.println("Digite a posição que deseja remover");
+						System.out.println("Digite a posicao que deseja remover");
 						int posicao = Integer.parseInt(scanner.nextLine());
 						principal.remove(posicao);
-						System.out.println("Posição removida com sucesso!!!");
+						System.out.println("Posicao removida com sucesso!!!");
 						menu();
 						break;
 					case 6:
 						double maiorDistancia = principal.calcularDistancia();
-						System.out.println("A distância dos dois pontos mais distantes na coleção é: " + maiorDistancia + "\n\n");
+						System.out.println("A distancia dos dois pontos mais distantes na colecao e: " + maiorDistancia + "\n\n");
 						menu();
 						break;
 					case 7:
-						System.out.println("adicione o valor dos pontos x e y");
-						int pontoX7 = Integer.parseInt(scanner.nextLine());
-						int pontoY7 = Integer.parseInt(scanner.nextLine());
-//						principal.adicionarFinalDisponivel(new Ponto(pontoX, pontoY));
+						System.out.println("Digite o Valor do Raio");
+						double value = Double.parseDouble(scanner.nextLine());
+						ListaPonto pontosCircunferencia = principal.pontosCircunferencia(value);
+						pontosCircunferencia.listar();
+						System.out.println("Validos: "+pontosCircunferencia.getValidos()+"\n\n");
 						menu();
 						break;	
 					case 0:
+						System.out.println("Programa finalizado com sucesso !");
 						break;	
 			
 					default:
-						System.out.println("Opção Inválida!");
+						System.out.println("Opcao Invalida!");
 						break;
 					}
 					
@@ -92,14 +100,14 @@ public class Principal {
 				System.out.printf(
 						"******** Menu ***********\n"
 						+ "1 - Adicionar novo ponto \n"
-						+ "2 - Adicionar novo ponto em determinada posição \n"
+						+ "2 - Adicionar novo ponto em determinada posicao \n"
 						+ "3 - Listar \n"
 						+ "4 - Buscar por ponto \n"
 						+ "5 - Remover ponto \n"
-						+ "6 - Calcular distância entre dois maiores pontos \n"
-						+ "7 - Nova coleção por raio \n"
+						+ "6 - Calcular distancia entre dois maiores pontos \n"
+						+ "7 - Nova colecao por raio \n"
 						+ "0 - Sair \n\n"
-						+ "Escolha uma opção \n"
+						+ "Escolha uma opcao \n"
 						);
 			}
 }
