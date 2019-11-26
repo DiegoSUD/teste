@@ -10,7 +10,6 @@ import br.com.senac.modelo.Ponto;
 // Diego 
 // Lucass
 
-
 public class Principal {
 	
 	public static void main(String[] args) {
