@@ -24,17 +24,17 @@ public class Principal {
 					opcao1 = opcao;
 					switch (opcao) {
 					case 1:
-						System.out.println("adicione o valor dos pontos x e y \n");
+						System.out.println("adicione o valor dos pontos x e y");
 						int pontoX = Integer.parseInt(scanner.nextLine());
 						int pontoY = Integer.parseInt(scanner.nextLine());
 						principal.adicionarFinalDisponivel(new Ponto(pontoX, pontoY));
 						menu();
 						break;
 					case 2:
-						System.out.println("Digite o valor dos pontos x e y \n");
+						System.out.println("Digite o valor dos pontos x e y");
 						int pontoX2 = Integer.parseInt(scanner.nextLine());
 						int pontoY2 = Integer.parseInt(scanner.nextLine());
-						System.out.println("Qual posição deseja add o ponto \n ");
+						System.out.println("Qual posição deseja add o ponto");
 						int pos = Integer.parseInt(scanner.nextLine());
 						principal.adicionarEmPosicao(pos, new Ponto(pontoX2, pontoY2));
 						menu();
@@ -56,17 +56,15 @@ public class Principal {
 						menu();
 						break;
 					case 5:
-						System.out.println("adicione o valor dos pontos x e y");
-						int pontoX5 = Integer.parseInt(scanner.nextLine());
-						int pontoY5 = Integer.parseInt(scanner.nextLine());
-//						principal.adicionarFinalDisponivel(new Ponto(pontoX, pontoY));
+						System.out.println("Digite a posição que deseja remover");
+						int posicao = Integer.parseInt(scanner.nextLine());
+						principal.remove(posicao);
+						System.out.println("Posição removida com sucesso!!!");
 						menu();
 						break;
 					case 6:
-						System.out.println("adicione o valor dos pontos x e y");
-						int pontoX6 = Integer.parseInt(scanner.nextLine());
-						int pontoY6 = Integer.parseInt(scanner.nextLine());
-//						principal.adicionarFinalDisponivel(new Ponto(pontoX, pontoY));
+						double maiorDistancia = principal.calcularDistancia();
+						System.out.println("A distância dos dois pontos mais distantes na coleção é: " + maiorDistancia + "\n\n");
 						menu();
 						break;
 					case 7:
@@ -98,7 +96,7 @@ public class Principal {
 						+ "3 - Listar \n"
 						+ "4 - Buscar por ponto \n"
 						+ "5 - Remover ponto \n"
-						+ "6 - Calcular distância entre dois pontos \n"
+						+ "6 - Calcular distância entre dois maiores pontos \n"
 						+ "7 - Nova coleção por raio \n"
 						+ "0 - Sair \n\n"
 						+ "Escolha uma opção \n"
