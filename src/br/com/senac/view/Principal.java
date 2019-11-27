@@ -7,8 +7,8 @@ import br.com.senac.modelo.Ponto;
 
 // Trabalho Programacao e Algoritmos II
 // Alexandre Vincius Ferreira da Silva
-// Diego 
-// Lucass
+// Diego Pereira Barroos
+// Lucas Moura
 
 public class Principal {
 	
@@ -16,7 +16,9 @@ public class Principal {
 		
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
+		
 				//Inicializa o tamanho desejado.
+		
 				System.out.print("Digite um tamanho para o seu vetor: \n");
 				int tamanho = Integer.parseInt(scanner.nextLine());
 				ListaPonto principal = new ListaPonto(tamanho);

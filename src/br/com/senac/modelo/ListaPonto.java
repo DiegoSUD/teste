@@ -2,9 +2,18 @@ package br.com.senac.modelo;
 
 public class ListaPonto {
 	
+	
+	/*
+	 * Atributos
+	 */
 	private Ponto pontos[];
 	private int validos;
 
+	
+	
+	/*
+	 * Construtor
+	 */
 	public ListaPonto(int n) {
 		this.pontos = new Ponto[n];
 		this.validos = 0;

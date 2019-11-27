@@ -2,13 +2,25 @@ package br.com.senac.modelo;
 
 public class Ponto {
 	
+	
+	/*
+	 * Atributos
+	 */
 	private int x, y;
+	
 
+	/*
+	 * Construtor
+	 */
 	public Ponto(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
+	
 
+	/*
+	 * Metodos
+	 */
 	public boolean igual(Ponto p) {
 		return this.x == p.x && this.y == p.y;
 	}
